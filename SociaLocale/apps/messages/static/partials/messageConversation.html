@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <button type="button" ng-click="close()" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Messages between you and {{ otherUser() }}</h3>
+</div>
+<div class="modal-body">
+    <div>
+        <span class="ui-icon ui-icon-arrowreturnthick-1-e" style="display: inline-block;"></span>
+        <a href="#" ng-click="flags.reply=!flags.reply" style="display: inline-block;">Reply</a>
+    </div>
+    <div ng-show="flags.reply" class="replyToMessageForm" style="clear:both;display: none;">
+        <textarea name="body" ng-model="replyBody"></textarea>
+        <button class="btn" ng-click="send(replyBody, message)" name="send">Send</button>
+    </div>
+    <ul>
+        <li class="item_container" ng-repeat="message in messages()">
+              <span class="item_image_container">
+                    <img class="item_image" ng-src="{{ message.from_user.mugshot }}"/>
+              </span>
+            <div class="item_info_wrapper">
+                <div class="small">
+                    <span>{{ message.from_user.username }}</span>
+                    <div class="item_container_sub_right">
+                        <!--<span class="deleteButton ui-icon ui-icon-trash" title="Delete Message" ng-click="delete(message)"></span>-->
+                        <span style="float: right; white-space: nowrap;">{{ message.sent_at | fromNow }}</span>
+                    </div>
+                </div>
+                <div style="display: block; min-height: 50px;">
+                    <span>{{ message.body }}</span>
+                </div>
+                <div class="small">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn" ng-click="close()" data-dismiss="modal" aria-hidden="true">Close</button>
+</div>

@@ -1,0 +1,27 @@
+<li class="broadcast_container item_container">
+	      <span class="item_image_container">
+                <img class="item_image" data-bind="attr: {'src': author.picture, 'alt': author.name}"/>
+	      </span>
+    <div class="broadcast_info_wrapper">
+        <div class="small">
+            <span style="float: left;" data-bind="text: author.name"></span>
+            <div class="item_container_sub_right" data-bind="if: (author.id === $root.me.user_id)">
+                <span class="deleteButton ui-icon ui-icon-trash" title="Delete Broadcast" data-bind="click: $root.selectedInterest().deleteBroadcast"></span>
+            </div>
+        </div>
+        <div style="display: block; min-height: 20px; clear: both;">
+            <span data-bind="text: content"></span>
+        </div>
+        <div class="small">
+            <span style="float: right;" data-bind="text: created"></span>
+            <span style="float: right;"><a href="#" ng-click="flags.reply=!flags.reply">reply</a></span>
+        </div>
+        <div ng-show="flags.reply" class="replyToMessageForm" style="clear:both;display: none;">
+            <form action="/messages/compose/" method="post" id="compose_message_form">
+                <input type="hidden" name="to" value="csmattd"/>
+                <textarea name="body"></textarea>
+                <input type="submit" name="send" value="Send" />
+            </form>
+        </div>
+    </div>
+</li>

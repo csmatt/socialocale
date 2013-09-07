@@ -1,0 +1,9 @@
+<span style="float: right;" class="icon-wrench" ng-click="showEditProfileModal()" title="Settings"></span>
+<div class="profileImage">
+    <img ng-src="{{ userDetails().picture }}"/>
+</div>
+<div class="userInfo">
+    <div>Name: {{ userDetails().user.first_name }}</div>
+    <div>Username: {{ userDetails().user.username }}</div>
+    <div>Email: {{ userDetails().user.email }}</div>
+</div>

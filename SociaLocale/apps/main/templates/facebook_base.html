@@ -1,0 +1,22 @@
+    <div id="fb-root"></div>
+    <script>
+      {# async loading of facebook js sdk #}
+      window.fbAsyncInit = function() { facebookInit({{ js_conf|safe }}) };
+      (function() {
+        var e = document.createElement('script');
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+      }());
+
+      {# async loading of google analytics #}
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19854556-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>    

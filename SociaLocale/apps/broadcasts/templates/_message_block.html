@@ -1,0 +1,19 @@
+    <li class="broadcast_container item_container">
+	      <span class="item_image_container">
+                <img class="item_image" data-bind="attr: {'src': author.picture, 'alt': author.name}"/>
+	      </span>
+        <div class="broadcast_info_wrapper">
+            <div class="small">
+                <span style="float: left;" data-bind="text: author.name"></span>
+                <div class="item_container_sub_right" data-bind="if: (author.id === $root.me.user_id)">
+                    <span class="deleteButton ui-icon ui-icon-trash" title="Delete Broadcast" data-bind="click: $root.selectedInterest().deleteBroadcast"></span>
+                </div>
+            </div>
+            <div style="display: block; min-height: 20px; clear: both;">
+                <span data-bind="text: content"></span>
+            </div>
+            <div class="small">
+                <span style="float: right;" data-bind="text: created"></span>
+            </div>
+        </div>
+    </li>

@@ -1,0 +1,33 @@
+/* broadcast bar and box styles */
+.broadcast_info_wrapper {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+}
+.broadcast_container {
+    min-height: 50px;
+}
+.broadcast_new_picture {
+    float: left;
+    padding-right: 6px;
+    width: 32px;
+    height: 32px;
+}
+.broadcast_info_wrapper > div {
+    display: block;
+}
+.broadcast_info_wrapper > div.small > span {
+    display: inline-block;
+    font-size: 10px;
+}
+.broadcast_list_container {
+    height: 80%;
+    margin: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#newBroadcastTextBox {
+    height: 30px;
+    width: 200px;
+    font-size: 12px;
+}

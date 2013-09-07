@@ -1,0 +1,78 @@
+<div class="buttons">
+    <button id="makeSuggestionButton" style="float:left;">
+        Make Suggestion
+    </button>
+    <button id="submitBugButton" style="float: right;">
+        Submit a Bug
+    </button>
+</div>
+<div id="bugReportForm" style="display: none;" title="Submit a Bug Report">
+    <h3>Please enter a description of the bug you encountered:</h3>
+    <textarea id="bugReportDescription"></textarea>
+</div>
+<div id="suggestionForm" style="display: none;" title="Make a Suggestion">
+    <h3>Please enter your suggestion:</h3>
+    <textarea id="suggestionText"></textarea>
+</div>
+<script type="text/javascript">
+    $("#submitBugButton").button().click(function () {
+        $("#bugReportForm").dialog("open");
+    });
+    $("#makeSuggestionButton").button().click(function () {
+        $("#suggestionForm").dialog("open");
+    });
+    $("#bugReportForm").dialog({
+        autoOpen:false,
+        height:300,
+        width:350,
+        modal:true,
+        buttons:{
+            "Submit":function () {
+                var description = $('#bugReportDescription').val();
+                jQuery.ajax({
+                    type:'POST',
+                    url:"/submitBug",
+                    data:{
+                        description:description,
+                        isBug:true
+                    },
+                    success:function (result) {
+                        $("#bugReportDescription").val("");
+                    }
+                });
+                $(this).dialog("close");
+            },
+            "Cancel":function () {
+                $("#bugReportDescription").val("");
+                $(this).dialog("close");
+            }
+        }
+    });
+    $("#suggestionForm").dialog({
+        autoOpen:false,
+        height:300,
+        width:350,
+        modal:true,
+        buttons:{
+            "Submit":function () {
+                var description = $('#suggestionText').val();
+                jQuery.ajax({
+                    type:'POST',
+                    url:"/submitBug",
+                    data:{
+                        description:description,
+                        isBug:false
+                    },
+                    success:function (result) {
+                        $("#suggestionText").val("");
+                    }
+                });
+                $(this).dialog("close");
+            },
+            "Cancel":function () {
+                $("#suggestionText").val("");
+                $(this).dialog("close");
+            }
+        }
+    });
+</script>

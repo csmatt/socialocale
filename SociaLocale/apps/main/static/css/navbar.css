@@ -1,0 +1,10 @@
+.navbar-lineheight {
+    line-height: 55px !important;
+}
+.divider-vertical {
+    height: 75px !important;
+    margin: 0 !important;
+}
+.navbar-inner {
+    height: 75px;
+}

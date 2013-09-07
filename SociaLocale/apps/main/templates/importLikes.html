@@ -1,0 +1,21 @@
+<div id="importLikes" style="display: none;">
+  <script type="text/javascript" src="{{ STATIC_URL }}/js/importLikes.js"></script>
+  <button id="importLikesCloseBtn"></button>
+  <span id="importLikesHeading">Select Interests to Import into SociaLocale</span>
+  <div style="clear: both;" class="buttons" style="min-height: 20px;">
+    <button id="likesSelectAllBtn">Select All</button>
+    <button id="likesSelectNoneBtn">Select None</button>
+  </div>
+  <div class="importLikesContainer">
+    <span data-bind="if: allLikes().length === 0" style="text-align: center;">You don't have any Facebook likes! It's cool, just type your interests into the 'Add new interest' box instead.</span>
+    <div data-bind="foreach: allLikes">
+      <div class="like" data-bind="attr: {'title': name}, click: $root.addToSelected, css: {selectedLikeToImport: $root.selectedToImport.indexOf($data) > -1}">
+	<span class="likeImage"><img data-bind="attr: {src: FB_GRAPH_URL + $data.id + '/picture'}"/></span>
+	<span class="likeText" data-bind="text: name"></span>
+      </div>
+    </div>
+  </div>
+  <div class="buttons" style="min-height: 20px; width: 50px; margin: auto;">
+    <button id="importLikesBtn">Import</button>
+  </div>
+</div>

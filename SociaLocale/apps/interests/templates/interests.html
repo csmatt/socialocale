@@ -1,0 +1,5 @@
+<ul id="interests" class="item_list_container interest_list_container">
+    <li ng-repeat="interest in interests()" class="interest_container item_container" ng-show="$parent.isVisible($index)" ng-class="{selectedInterest: interest.id==$parent.selectedInterest().id}" ng-click="$parent.setSelectedInterest(interest)">
+        {% include "interest_block.html" %}
+    </li>
+</ul>

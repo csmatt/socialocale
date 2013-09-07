@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% block title %}Welcome to SociaLocale{% endblock title %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/landing_page.css"
+          xmlns="http://www.w3.org/1999/html"/>
+{% endblock extrahead %}
+{% block content %}
+    <div class="navbar" style="z-index: 21; width: 100%;">
+        <div class="navbar-inner">
+            <a class="brand navbar-lineheight" href="#"><img src="{{ STATIC_URL }}images/logo.png" style="width:185px; height:40px; top: -7px; position: relative;"/></a>
+            <ul class="nav">
+                <li class="divider-vertical"></li>
+                <li class="navbar-lineheight">
+                    <a id="navbarMessageBtn" href="#" role="button">
+                        <span class="icon-inbox"></span>
+                        Messages
+                    </a>
+                </li>
+                <li class="divider-vertical"></li>
+            </ul>
+        </div>
+    </div>
+        <!-- Top Content Area -->
+        <div class="non-semantic-protector">
+            <!-- ribbons and other content in here -->
+            <h1 class="ribbon" style="line-height: 20px;">
+                <strong class="ribbon-content">An Interest And Location Based Social Network</strong>
+            </h1>
+        </div>
+
+    <div id="main">
+
+
+        <!--<div id="top-content" class="text-font">
+            <p>
+              <span>
+                  An interest and location based social network
+              </span>
+            </p>
+        </div>-->
+
+        <!-- Mid Panel with an Image -->
+        <div class="well" id="mid-panel-box">
+            <div id="mid-panel-image">
+                <img src="{{ STATIC_URL }}images/landing-image.png" />
+            </div>
+            <!-- Box next to the image for bullet points-->
+            <div id="mission" >
+                <!-- First Bullet Point -->
+                <div class="bullet-icon" style="top: 10px;">
+                    <div class="bullet-point-image">
+                        <img src="{{ STATIC_URL }}images/BulletIcon.png" style="height:15px; width:15px;">
+                    </div>
+                    <div class="bullet-point-format" class="text-font">
+                        <p>
+                            <span>Share your interests</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Second Bullet Point -->
+                <div class="bullet-icon" style="top: 60px;">
+                    <div class="bullet-point-image">
+                        <img src="{{ STATIC_URL }}images/BulletIcon.png" style="height:15px; width:15px;">
+                    </div>
+                    <div class="bullet-point-format" class="text-font">
+                        <p>
+                            <span>Find people nearby who share your interests</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Third Bullet Point -->
+                <div class="bullet-icon" style="top: 120px;">
+                    <div class="bullet-point-image">
+                        <img src="{{ STATIC_URL }}images/BulletIcon.png" style="height:15px; width:15px;">
+                    </div>
+                    <div class="bullet-point-format" class="text-font">
+                        <p>
+                            <span>Socialize with other SociaLocale members in your community</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="top: 250px; width: 330px; height: 90px; left: 600px; position: absolute;">
+                <!--<p style="color: white;text-align: left; font-size: 14px;">
+                    <span>
+                      SociaLocale is an interest based social media platform that is designed to connect individuals
+                      with common interests.
+                    </span>
+                </p>
+                <p style="color: #f0f8ff;text-align: left; font-family: verdana, helvetica, sans-serif; font-size: 16px; text-align: center;">
+                    <span>
+                      Join Today !!!
+                    </span>
+                </p>-->
+                <div id="lrg-button">
+                    <a target="_self" style="text-decoration: none; width: 290px; height: 50px;" >
+                        <span style="color: #FFF; line-height: 50px; width: 102px; height: 18px;">Coming Soon!</span>
+                    </a>
+                </div>
+                <div id="emailSubscriptionContainer">
+                    <span id="emailInvalidError"></span>
+                    <form action="/subscribe/" id="subscribeForm" method="post">{% csrf_token %}
+                        <input id="subscribeEmail" type="email" name="email"/>
+                        <button id="subscribeBtn" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- FB, TWitter and other objects for sharing -->
+            <div id="sharing" style="top:330px; width: 370px; height: 21px; position: absolute; left: 30px;">
+                <div class="fb-like" data-send="false" data-layout="button_count" data-width="400" data-show-faces="false"></div>
+            </div>
+        </div>
+
+        <!-- Bottom part of the page with dividers -->
+        <div id="steps" style="margin-top: 25px;">
+            <div class="step-container">
+                <div class="check-mark">
+                    <span class="icon-globe step-title-icon"></span>
+{#                    <img src="{{ STATIC_URL }}images/check-mark.png">#}
+                </div>
+                <div class="check-mark-text">
+                  <span class="text-font">
+                      <strong>Enter your location</strong>
+                      <br>
+                  </span>
+                </div>
+                <div class="desc-box">
+                    <p class="text-font">
+                        Enter a general location of where you'd like to find people with similar interests.
+                    </p>
+                </div>
+            </div>
+            <div class="step-container" style="border-left: solid 1px black; border-right: solid 1px black;">
+                <div class="check-mark">
+                    <span class="icon-ok-sign step-title-icon"></span>
+{#                    <img src="{{ STATIC_URL }}images/check-mark.png">#}
+                </div>
+
+                <div class="check-mark-text">
+                  <span class="text-font">
+                      <strong>Add your interests</strong>
+                      <br/>
+                  </span>
+                </div>
+                <div class="desc-box">
+                    <p class="text-font">
+                        Select interests that you are most passionate about.
+                    </p>
+                    <p class="text-font">
+                        Your interests can be anywhere from organizing volunteers in your community to finding partners for indoor and outdoor activities.
+                    </p>
+                </div>
+            </div>
+            <div class="step-container">
+                <div class="check-mark">
+                    <span class="icon-group step-title-icon"></span>
+{#                    <img src="{{ STATIC_URL }}images/check-mark.png">#}
+                </div>
+                <div class="check-mark-text">
+                  <span class="text-font">
+                      <strong>Find new friends!</strong>
+                      <br>
+                  </span>
+                </div>
+                <div class="desc-box">
+                    <p class="text-font">
+                        Start talking to your new friends.
+                    </p>
+                    <p class="text-font">
+                        Discover what others in your neighborhood are interested in.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: solid 1px black;">
+            <p class="text-font" style="font-size: 10px;">
+                <img src="{{ STATIC_URL }}images/logo.png" style="height:20px;">
+                <span>&copy; 2013. SociaLocale, Inc. All Rights Reserved.</span>
+            </p>
+        </div>
+    </div>
+    <!-- Java Script needed for FB Like button-->
+    <div id="fb-root"></div>
+{% endblock content %}
+{% block scripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/landingPage.js"></script>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+{% endblock scripts %}

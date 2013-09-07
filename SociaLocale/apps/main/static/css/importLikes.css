@@ -1,0 +1,53 @@
+.selectedLikeToImport {
+    background-color: #878785;
+}
+#importLikes {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    z-index: 1001;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 10px;
+    background:rgba(0,0,0,.8);
+    -pie-background: rgba(0,0,0,.8);
+    behavior: url(/js/lib/iefix/PIE.htc);
+    overflow: hidden;
+}
+#importLikesHeading {
+    text-align: center;
+    font-size: 2em;
+}
+#importLikes > .buttons {
+    min-height: 20px;
+}
+#importLikes > .importLikesContainer {
+    overflow-y: scroll;
+    height: 60%;
+}
+#importLikesCloseBtn {
+    float: right;
+    margin: 5px;
+}
+#importLikes span {
+    display: block; 
+    color: white;
+    font-family: Verdana, serif;
+}
+span.likeImage {
+    width: 50px;
+    margin: auto;
+    padding-top: 10px;
+}
+span.likeText {
+    width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+div.like {
+    display: inline-block;
+    border-radius: 5px;
+    margin: 2px;
+}

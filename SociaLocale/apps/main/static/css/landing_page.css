@@ -1,0 +1,215 @@
+
+#main{
+    height: 1150px;
+    left: 0px;
+    top: 0px;
+    width: 940px;
+    z-index: 0;
+    background-color: #E3E2DD;
+    border-top-width: 0px;
+    border-right-width-value: 0px;
+    border-bottom-width: 0px;
+    border-left-width-value: 0px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
+}
+
+#top-content {
+    color: #2B3856;
+    font-size: 16px;
+    text-align: center;
+}
+
+#mid-panel-box {
+    height: 330px;
+    top: 160px;
+    width: 900px;
+    margin: auto;
+    background-color: #2B3856;
+}
+
+#mid-panel-image {
+    height: 270px;
+    width: 550px;
+    top: 50px;
+    left: 30px;
+    position: absolute;
+}
+
+#mission {
+    height: 200px;
+    left: 650px;
+    top: 50px;
+    width: 300px;
+    z-index: 6;
+    position: absolute;
+    background-color: transparent;
+    border-style: none;
+    border-color: #000;
+    border-width: 1px;
+    font-size: 10pt;
+}
+
+.text-font {
+    font-family: verdana, helvetica, sans-serif;
+}
+
+p.text-font {
+    padding-left: 35px;
+}
+
+.bullet-icon {
+    height: 40px;
+    width: 250px;
+    left: 0px;
+    position: absolute;
+}
+
+.bullet-point-format {
+    left: 30px;
+    position: absolute;
+    color: #f0f8ff;
+    font-size: 14px;
+}
+
+.bullet-point-image {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+#lrg-button {
+
+    cursor: pointer;
+    color: #FFF;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: Bold;
+    text-align: center;
+    text-shadow: #e56717 0 -1px 0;
+    background-color: #f87431;
+    background-position: top left;
+    background: -moz-linear-gradient(top,#f87431 0,#e56717 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#f87431),color-stop(100%,#e56717));
+    background: -webkit-linear-gradient(top,#f87431 0,#e56717 100%);
+    background: -o-linear-gradient(top,#f87431 0,#e56717 100%);
+    background: -ms-linear-gradient(top,#f87431 0,#e56717 100%);
+    background: linear-gradient(top,#f87431 0,#e56717 100%);
+    border-top: 1px None #000;
+    border-right: 1px None #000;
+    border-bottom: 1px None #000;
+    border-left: 1px None #000;
+    -webkit-box-shadow: 1px 1px 2px 0 #2B3856;
+    -moz-box-shadow: 1px 1px 2px 0 #2B3856;
+    box-shadow: 1px 1px 2px 0 #2B3856;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 4px;
+
+}
+
+.step-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 5px;
+}
+
+.check-mark {
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+}
+
+.check-mark-text {
+    height: 25px;
+    width: 200px;
+    font-size: 18px;
+    display: inline-block;
+}
+.step-title-icon {
+    font-size: 1.5em;
+    color: rgb(58, 170, 43);
+}
+.desc-box{
+
+    background-color: transparent;
+    border-style: none;
+    border-color: #000;
+    border-width: 1px;
+    font-size: 12px;
+    height: 144px;
+    top: 590px;
+    width: 260px;
+}
+
+.dividerx {
+    height: 200px;
+    width: 1px;
+    display: inline-block;
+    z-index: 8;
+    border-width: 0;
+    background-color: #2B3856;
+}
+
+#subscribeEmail {
+    width: 200px;
+    margin: 10px;
+}
+
+#emailInvalidError {
+    color: orangered;
+}
+
+.ribbon {
+    font-size: 16px !important;
+    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+    border-radius: 5px 5px 0 0;
+    width: 75%;
+    position: relative;
+    background: rgb(46, 81, 162);
+    /*background: #ba89b6;*/
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em; /* Adjust to suit */
+    margin: 2em auto 1em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid rgb(69, 105, 189);
+    z-index: -1;
+}
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: rgb(30, 66, 155) transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
+.non-semantic-protector { position: relative; z-index: 1; }

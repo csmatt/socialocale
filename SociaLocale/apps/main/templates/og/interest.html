@@ -1,0 +1,8 @@
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# {{conf.FACEBOOK_CANVAS_NAME}}: http://ogp.me/ns/fb/{{conf.FACEBOOK_CANVAS_NAME}}#">
+  <meta property="fb:app_id" content="{{conf.FACEBOOK_APP_ID}}" />
+  <meta property="og:type"   content="{{conf.FACEBOOK_CANVAS_NAME}}:interest" />
+  <meta property="og:url"    content="{{url}}" />
+  <meta property="og:title"  content="{{ name }}" />
+{% if picture %}
+  <meta property="og:image"  content="{{ picture }}" />
+{% endif %}

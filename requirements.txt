@@ -1,0 +1,17 @@
+django==1.4.3
+psycopg2==2.4.6
+factory_boy==1.2.0
+oauth2==1.5.211
+path.py==2.4.1
+httplib2==0.7.7
+mock==1.0.1
+django-userena==1.1.2
+django-social-auth==0.7.18
+django-annoying==0.7.6
+easy-thumbnails==1.1
+south==0.7.6
+python-openid==2.2.5
+PIL==1.1.7
+django-extensions==1.0.2
+django-debug-toolbar==0.9.4
+djangorestframework==2.2.3

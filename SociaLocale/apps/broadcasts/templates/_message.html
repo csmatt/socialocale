@@ -1,0 +1,17 @@
+<div class="broadcastsDiv" style="height: 100%;" data-bind="with: selectedInterest()">
+    <img class="broadcast_new_picture" data-bind="attr: {'src': $root.me.picture, 'alt': $root.me.name}"/>
+    <form data-bind="submit: $root.submitNewBroadcast">
+        <textarea name="newBroadcastTextBox" id="newBroadcastTextBox" data-bind="watermark: $root.newBroadcastTextWatermark, executeOnEnter: $root.submitNewBroadcast, disable: $root.disableNewBroadcasts"></textarea>
+        <button id="submitBroadcastBtn" data-bind="jqueryui: {widget: 'button', options: {icons: {primary: 'ui-icon-signal-diag'}, text: false}}, click: $root.submitNewBroadcast, disable: $root.disableNewBroadcasts"></button>
+    </form>
+    <div id="broadcastsForInterest" class="content">
+        <ul class="broadcast_list_container item_list_container" data-bind="foreach: broadcasts">
+        {% include "message_block.html" %}
+        </ul>
+    </div>
+    <div id="umessages" data-bind="with: $root.me" class="content" style="display: none;">
+        <ul class="broadcast_list_container item_list_container" data-bind="foreach: messages">
+        {% include "message_block.html" %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+.transparent {
+    -pie-background: rgba(21, 164, 212, .8);
+    behavior: url(/js/lib/iefix/PIE.htc);
+}

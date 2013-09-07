@@ -1,0 +1,14 @@
+{% load verbatim %}
+{% verbatim %}
+<div class="item_container_sub_right">
+    <span class="deleteButton ui-icon ui-icon-trash" title="Delete Interest"
+                              ng-click="$parent.delete(interest)"></span>
+    <span class="user_count_for_interest">{{ users.length }}</span>
+</div>
+<div style="display: inline;">
+    <div class="item_image_container" style="margin: auto;">
+        <img class="item_image" ng-src="{{ interest.picture }}"/>
+    </div>
+    <span class="interest">{{ interest.name }}</span>
+</div>
+{% endverbatim %}

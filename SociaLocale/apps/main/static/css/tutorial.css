@@ -1,0 +1,52 @@
+#newUserTutorial {
+    width: 50%;
+    /*height: 300px;*/
+    margin: auto;
+    z-index: 1001;
+    position: absolute;
+    top: 25%;
+    right: 402px;
+    border-radius: 10px;
+    background:rgba(0,0,0,.8);
+    -pie-background: rgba(0,0,0,.8);
+    behavior: url(/js/lib/iefix/PIE.htc);
+}
+#newUserTutorialCloseBtn {
+    float: right;
+    margin: 5px;
+}
+span.whiteText {
+    display: block; 
+    color: white;
+    font-family: Verdana, serif;
+    margin: 10px;
+}
+#newUserTutorialHeading {
+    text-align: center;
+    font-size: 2em;
+}
+#newUserTutorialOtherInstructions {
+    display: block; 
+    color: white;
+    font-family: Verdana, serif;
+    margin-top: 20px;
+}
+#newUserTutorialOtherInstructions > span {
+    margin-left: 20px;
+}
+#newUserTutorialOtherInstructions > ul {
+    margin: 5px 10px 10px 40px;
+}
+#newUserTutorialOtherInstructions > ul > li {
+    list-style: square outside none;
+}
+#tutorialNavigationBackBtn {
+    float: left;
+    height: 30px;
+    margin-bottom: 5px;
+}
+#tutorialNavigationForwardBtn {
+    float: right;
+    height: 30px;
+    margin-bottom: 5px;
+}

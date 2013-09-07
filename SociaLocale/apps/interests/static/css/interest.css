@@ -1,0 +1,53 @@
+/* interest bar and box styles */
+#add_interest {
+    margin: 5px;
+    font-size: 0.8em;
+}
+#add_interest > span {
+    color: white;
+    font-family: Verdana, serif;
+    font-weight: bold;
+}
+.interest {
+    display : inline-block;
+    overflow : hidden;
+    white-space : nowrap;
+    width : 70%;
+}
+.interest_container {
+    font-size : 12px;
+    text-align : center;
+    width: 100px !important;
+    display: inline-block;
+    list-style-type: none;
+    clear: none;
+}
+.interest_list_container {
+    margin: auto;
+    display: inline-block;
+    width: 310px;
+}
+#addInterestTextBox {
+    width: 160px;
+}
+.bar > .interestsDiv > span.locationLabel {
+    width: 190px;
+}
+.bar > .interestsDiv > input[name=locationAutocomplete] {
+    font-weight: normal;
+    width: 190px;
+    vertical-align: top;
+    margin: 5px 0 0;
+}
+
+.selectedInterest {
+    border: 1px solid red;
+}
+#interests {
+    height: 75px;
+}
+
+.carouselBtn {
+    vertical-align: top;
+    margin-top: 20px !important;
+}

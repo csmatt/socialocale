@@ -1,0 +1,55 @@
+<div class="modal-header">
+    <button type="button" ng-click="close()" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Messages</h3>
+</div>
+<div class="modal-body">
+    <div>
+        <span style="display: inline-block;" class="ui-icon ui-icon-mail-closed"></span>
+        <a href="#" ng-click="flags.compose=!flags.compose" style="display: inline-block;">New</a>
+    </div>
+    <div>
+        <div id="composeMessageContainer" ng-show="flags.compose">
+            <form id="composeMessageForm" method="POST">
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" ng-model="to" autocomplete="/user/users" />
+                <div>
+                    <textarea name="body" ng-model="body"></textarea>
+                </div>
+                <button class="btn" type="submit" ng-click="send(body, null, to)">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <ul>
+        <li class="item_container" ng-repeat="message in messages()">
+              <span class="item_image_container">
+                    <img class="item_image" ng-src="{{ message.from_user.mugshot }}"/>
+              </span>
+            <div class="item_info_wrapper">
+                <div class="small">
+                    <span>{{ message.from_user.username }}</span>
+                    <div class="item_container_sub_right">
+                        <!--<span class="deleteButton ui-icon ui-icon-trash" title="Delete Message" ng-click="delete(message)"></span>-->
+                        <span style="float: right; white-space: nowrap;">{{ message.latest_message.sent_at | fromNow }}</span>
+                    </div>
+                </div>
+                <div style="display: block; min-height: 50px;">
+                    <span>{{ message.latest_message.body }}</span>
+                </div>
+                <div class="small">
+                    <span class="ui-icon ui-icon-comment" style="display: inline-block;"></span>
+                    <a href="#" ng-click="viewConversation(message)" style="display: inline-block;">View Conversation</a>
+                    <span class="ui-icon ui-icon-arrowreturnthick-1-e" style="display: inline-block;"></span>
+                    <a href="#" ng-click="message.flags.reply=!message.flags.reply" style="display: inline-block;">Reply</a>
+                </div>
+                <div ng-show="message.flags.reply" class="replyToMessageForm" style="clear:both;display: none;">
+                        <textarea name="body" ng-model="replyBody"></textarea>
+                        <button class="btn" ng-click="send(replyBody, message)" name="send">Send</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn" data-dismiss="modal" ng-click="close()" aria-hidden="true">Close</button>
+</div>

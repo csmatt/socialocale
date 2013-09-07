@@ -1,0 +1,9 @@
+<div id="loginOptions" style="display: none;">
+<script type="text/javascript" src="{{ STATIC_URL }}/js/login.js"></script>
+<div id="loginDialog" title="Click on a site to log in with...">
+    <p data-bind="foreach: loginTypes">
+        <img data-bind="attr: {'src': imageUrl, 'alt': siteName}, click: $root.onButtonClick"/>
+    </p>
+    <a href="{% url socialauth_begin 'facebook' %}"></a>
+</div>
+</div>

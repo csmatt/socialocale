@@ -1,0 +1,46 @@
+<div id="newUserTutorial" style="display: none;">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tutorial.js"></script>
+    <button id="newUserTutorialCloseBtn"></button>
+    <table id="tutorialTable" style="width: 100%; height: 100%;">
+        <thead>
+        <tr>
+            <th>
+                <span id="newUserTutorialHeading" class="whiteText" data-bind="text: heading"></span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <span id="newUserTutorialInstructions" class="whiteText" data-bind="text: instructions"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="newUserTutorialOtherInstructions" data-bind="visible: tips().length > 0">
+                    <span>Tips</span>
+                    <ul data-bind="foreach: tips">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="newUserTutorialExtraButtons"></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="tutorialNavigation">
+                    <div>
+                        <button id="tutorialNavigationBackBtn">Back</button>
+                    </div>
+                    <div>
+                        <button id="tutorialNavigationForwardBtn">Next</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
