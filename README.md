@@ -13,3 +13,5 @@ At the very least, I do require that I am credited as the author (or contributin
 Matt Defenthaler
 
 ![Screenshot](/docs/screenshot.png)
+
+The site is built with AngularJS, Django, and PostGIS
